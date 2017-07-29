@@ -1,3 +1,10 @@
 language: node_js
 node_js:
   - 6
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database mock_trial_test;' -U postgres
+script:
+  - yarn test
+  - rspec
