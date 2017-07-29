@@ -12,5 +12,5 @@ script:
   - yarn test
   - rake spec
 cache:
-  -yarn
-  -bundler
+  - yarn
+  - bundler
