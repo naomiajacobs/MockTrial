@@ -3,6 +3,7 @@ node_js:
   - 6
 install:
   - bundle install
+  - yarn
 services:
   - postgresql
 before_script:
@@ -12,3 +13,4 @@ script:
   - rake spec
 cache:
   -yarn
+  -bundler
