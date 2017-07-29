@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 6
 install:
-  - bundle install
+  - bundle install --deployment
   - yarn
 services:
   - postgresql
@@ -13,4 +13,4 @@ script:
   - rake spec
 cache:
   - yarn
-  - bundler
+  - vendor/bundle
