@@ -1,8 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import styles from './application.scss';
+import React from 'react'
 
-ReactDOM.render(
-  <div className="hello" >Hello, World!</div>,
-  document.getElementById('app')
-);
+export default function() { return <div className="hello" >Hello, World!</div> }
