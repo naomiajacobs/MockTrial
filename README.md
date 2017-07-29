@@ -1,4 +1,4 @@
 Current status: boilerplate
-- Webpack, React are set up
-- no CI yet
 - no selenium yet
+
+To use, copy this folder to a new repo, and remember to change the db name.
