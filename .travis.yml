@@ -7,4 +7,6 @@ before_script:
   - psql -c 'create database mock_trial_test;' -U postgres
 script:
   - yarn test
-  - rspec
+  - rake spec
+cache:
+  -yarn
