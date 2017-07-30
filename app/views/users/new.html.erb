@@ -1,0 +1,72 @@
+<% provide(:title, 'Sign up') %>
+<style>
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #B2DFDB;
+  color: #4E342E;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+input {
+  background-color: #E0F2F1;
+  border: none;
+  height: 30px;
+  width: 350px;
+}
+
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+}
+
+</style>
+<h1>Sign up</h1>
+
+<div>
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/user_error_messages' %>
+
+    <div class="field-wrapper">
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </div>
+
+    <div class="field-wrapper">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="field-wrapper">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+
+    <div class="field-wrapper">
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+
+    <div class="field-wrapper">
+      <%= f.submit "Create my account", class: "submit" %>
+    </div>
+  <% end %>
+</div>
