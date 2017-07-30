@@ -9,7 +9,7 @@ const testing = process.env.NODE_ENV === 'test'
 
 let config = {
   entry: {
-    'application': './app/assets/javascripts/application.jsx',
+    'index': './app/assets/javascripts/index.jsx',
     'styles': './app/assets/javascripts/application.scss',
     'specs': './app/assets/javascripts/specs.js',
   },
