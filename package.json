@@ -10,6 +10,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.2",
+    "stats-webpack-plugin": "^0.6.1",
     "webpack": "^3.4.1"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "node-sass": "^4.5.3",
     "react-test-renderer": "^15.6.1",
     "sass-loader": "^6.0.6",
-    "stats-webpack-plugin": "^0.6.1",
     "style-loader": "^0.18.2",
     "webpack-dev-server": "^2.6.1"
   },
@@ -61,7 +61,6 @@
     "start": "./node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
     "test": "./node_modules/.bin/jest",
     "webpack:deploy": "webpack --config config/webpack.config.js -p",
-    "heroku-prebuild": "yarn global add webpack",
     "heroku-postbuild": "yarn webpack:deploy"
   }
 }
