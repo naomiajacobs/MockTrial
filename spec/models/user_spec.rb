@@ -5,8 +5,8 @@ RSpec.describe User, type: :model do
     user = User.new(
       username: 'naomiajacobs',
       email: 'naomiajacobs@gmail.com',
-      password: 'buttfac',
-      password_confirmation: 'buttfac'
+      password: 'buttfac88',
+      password_confirmation: 'buttfac88'
     )
     expect(user).to be_valid
   end
