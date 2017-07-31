@@ -11,6 +11,7 @@ let config = {
   entry: {
     index: './app/assets/javascripts/index.jsx',
     indexStyles: './app/assets/javascripts/components/application/application.scss',
+    headerStyles: './app/assets/javascripts/components/header/header.scss',
     specs: './app/assets/javascripts/specs.js',
   },
 
