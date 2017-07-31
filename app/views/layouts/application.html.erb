@@ -20,6 +20,11 @@
         margin: 0px;
       }
     </style>
+    <script>
+      window.MockTrial = {
+        loggedIn: Boolean(<%= @logged_in %>),
+      };
+    </script>
     <div id='header'></div>
     <%= yield %>
     <div id='app'></div>

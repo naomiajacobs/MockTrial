@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def new
+    @logged_in = logged_in?
     render 'layouts/application.html.erb'
   end
 end
