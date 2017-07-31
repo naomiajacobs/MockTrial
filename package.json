@@ -60,7 +60,7 @@
     "lintfix": "yarn lint -- --fix",
     "start": "./node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
     "test": "./node_modules/.bin/jest",
-    "webpack:deploy": "./node_modules/.bin/webpack --config config/webpack.config.js -p",
+    "webpack:deploy": "webpack --config config/webpack.config.js -p",
     "heroku-prebuild": "yarn global add webpack",
     "heroku-postbuild": "yarn webpack:deploy"
   }
