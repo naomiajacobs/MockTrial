@@ -22,7 +22,10 @@ let config = {
   },
 
   resolve: {
-    modules: [path.resolve(__dirname, '..', 'app', 'assets', 'javascripts'), 'node_modules'],
+    modules: [
+      path.resolve(__dirname, '..', 'app', 'assets', 'javascripts'),
+      path.resolve(__dirname, '..', 'node_modules')
+    ],
     extensions: ['.js', '.jsx']
   },
 
@@ -59,12 +62,10 @@ let config = {
 }
 
 let plugins = [
-  new webpack.NoErrorsPlugin(),
+  new webpack.NoEmitOnErrorsPlugin(),
   new webpack.DefinePlugin({
     'process.env': { NODE_ENV: JSON.stringify('production') }
   }),
-//   new webpack.optimize.DedupePlugin(),
-//   new webpack.optimize.OccurenceOrderPlugin(),
 ]
 
 if (production) {
