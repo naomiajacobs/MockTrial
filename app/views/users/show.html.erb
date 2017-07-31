@@ -1,2 +1,36 @@
-User Profile
-<%= @user.username %>, <%= @user.email %>
+<style>
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #B2DFDB;
+    color: #4E342E;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+</style>
+<div class="title">
+  User Profile
+</div>
+<div class="wrapper">
+  <div>
+    Name: <%= @user.username %>
+  </div>
+  <div>
+    Email: <%= @user.email %>
+  </div>
+</div>
