@@ -56,9 +56,11 @@
     ]
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
     "lint": "./node_modules/.bin/eslint app/assets/javascripts/**/*.js",
     "lintfix": "yarn lint -- --fix",
-    "test": "./node_modules/.bin/jest"
+    "start": "./node_modules/.bin/webpack-dev-server --config config/webpack.config.js",
+    "test": "./node_modules/.bin/jest",
+    "webpack:deploy": "./node_modules/.bin/webpack --config config/webpack.config.js -p",
+    "heroku-postbuild": "npm run webpack:deploy"
   }
 }

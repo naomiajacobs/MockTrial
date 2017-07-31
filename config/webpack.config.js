@@ -56,20 +56,13 @@ let config = {
     }),
     new ExtractTextPlugin('styles.css')
   ],
-
-  // externals: {
-  //   'cheerio': 'window',
-  //   'react/addons': true,
-  //   'react/lib/ExecutionEnvironment': true,
-  //   'react/lib/ReactContext': true
-  // }
 }
 
 let plugins = [
-//   new webpack.NoErrorsPlugin(),
-//   new webpack.DefinePlugin({
-//     'process.env': { NODE_ENV: JSON.stringify('production') }
-//   }),
+  new webpack.NoErrorsPlugin(),
+  new webpack.DefinePlugin({
+    'process.env': { NODE_ENV: JSON.stringify('production') }
+  }),
 //   new webpack.optimize.DedupePlugin(),
 //   new webpack.optimize.OccurenceOrderPlugin(),
 ]
