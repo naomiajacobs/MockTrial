@@ -6,6 +6,25 @@
   </head>
 
   <body>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #B2DFDB;
+        color: #4E342E;
+        font-family: verdana, arial, helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0px;
+      }
+    </style>
+    <script>
+      window.MockTrial = {
+        loggedIn: Boolean(<%= @logged_in %>),
+      };
+    </script>
     <div id='header'></div>
     <%= yield %>
     <div id='app'></div>

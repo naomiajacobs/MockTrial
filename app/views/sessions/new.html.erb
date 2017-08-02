@@ -1,4 +1,4 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, "Log in") %>
 <style>
 input {
   background-color: #E0F2F1;
@@ -31,34 +31,24 @@ p, ol, ul, td {
 }
 
 </style>
-<h1>Sign up</h1>
+<h1>Log in</h1>
 
 <div>
-  <%= form_for(@user, url: signup_path) do |f| %>
-    <%= render 'shared/user_error_messages' %>
-
-    <div class="field-wrapper">
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-    </div>
-
+  <%= form_for(:session, url: login_path) do |f| %>
     <div class="field-wrapper">
       <%= f.label :email %>
-      <%= f.email_field :email %>
+      <%= f.email_field :email, class: 'form-control' %>
     </div>
 
     <div class="field-wrapper">
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, class: 'form-control' %>
     </div>
 
     <div class="field-wrapper">
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-    </div>
-
-    <div class="field-wrapper">
-      <%= f.submit "Create my account", class: "submit" %>
+      <%= f.submit "Log in", class: "submit" %>
     </div>
   <% end %>
+
+  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 </div>

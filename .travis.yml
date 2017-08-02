@@ -14,3 +14,6 @@ script:
 cache:
   - yarn
   - vendor/bundle
+notifications:
+  email:
+    false
