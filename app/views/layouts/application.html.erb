@@ -26,11 +26,9 @@
       };
     </script>
     <div id='header'></div>
-    <%= yield %>
     <div id='app'></div>
+    <%= yield %>
     <div id='footer'></div>
     <%= javascript_include_tag *webpack_asset_paths("index", extension: 'js') %>
-    <%= stylesheet_link_tag *webpack_asset_paths("headerStyles", extension: 'css') %>
-    <%= stylesheet_link_tag *webpack_asset_paths("indexStyles", extension: 'css') %>
   </body>
 </html>

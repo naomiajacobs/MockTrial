@@ -10,8 +10,6 @@ const testing = process.env.NODE_ENV === 'test'
 let config = {
   entry: {
     index: './app/assets/javascripts/index.jsx',
-    indexStyles: './app/assets/javascripts/components/application/application.scss',
-    headerStyles: './app/assets/javascripts/components/header/header.scss',
     specs: './app/assets/javascripts/specs.js',
   },
 
@@ -41,10 +39,24 @@ let config = {
      },
      {
        test: /(\.scss|\.css)$/,
-       use: ExtractTextPlugin.extract({
-         fallback: 'style-loader',
-         use: ['css-loader','sass-loader']
-       })
+      //  use: ExtractTextPlugin.extract({
+      use: [
+        { loader: 'style-loader' },
+        {
+          loader: 'css-loader',
+          options: {
+            localIdentName: '[sha512:hash:base32]-[name]-[local]',
+            modules: true,
+          }
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            plugins: () => [require('autoprefixer')]
+          }
+        },
+        { loader: 'sass-loader' }
+      ]
      }
    ],
  },
@@ -57,7 +69,7 @@ let config = {
       modules: false,
       assets: true
     }),
-    new ExtractTextPlugin('styles.css')
+    // new ExtractTextPlugin('styles.css')
   ],
 }
 
