@@ -10,6 +10,7 @@ const testing = process.env.NODE_ENV === 'test'
 let config = {
   entry: {
     index: './app/assets/javascripts/index.jsx',
+    landing: './app/assets/javascripts/components/landing-page/index.jsx',
     specs: './app/assets/javascripts/specs.js',
   },
 
