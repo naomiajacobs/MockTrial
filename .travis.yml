@@ -13,7 +13,7 @@ script:
   - rake spec
 cache:
   - yarn
-  - vendor/bundle
+  - ./vendor/bundle
 notifications:
   email:
     false
