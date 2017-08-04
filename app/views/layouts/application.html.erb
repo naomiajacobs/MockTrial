@@ -3,6 +3,8 @@
   <head>
     <title>MockTrial</title>
     <%= csrf_meta_tags %>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif" rel="stylesheet">
   </head>
 
   <body>
@@ -13,11 +15,18 @@
         justify-content: center;
         flex-direction: column;
         background-color: #B2DFDB;
-        color: #4E342E;
-        font-family: verdana, arial, helvetica, sans-serif;
+        color: #263238;
+        font-family: 'PT Serif', verdana, arial, helvetica, sans-serif;
         font-size: 13px;
         line-height: 18px;
         margin: 0px;
+      }
+
+      #app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
       }
     </style>
     <script>
@@ -26,11 +35,9 @@
       };
     </script>
     <div id='header'></div>
-    <%= yield %>
     <div id='app'></div>
+    <%= yield %>
     <div id='footer'></div>
     <%= javascript_include_tag *webpack_asset_paths("index", extension: 'js') %>
-    <%= stylesheet_link_tag *webpack_asset_paths("headerStyles", extension: 'css') %>
-    <%= stylesheet_link_tag *webpack_asset_paths("indexStyles", extension: 'css') %>
   </body>
 </html>
