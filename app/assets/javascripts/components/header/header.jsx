@@ -8,7 +8,7 @@ function Header({ loggedIn }) {
       <div className={styles.headerLeft}>
         Mock Trial Tournament Runner
       </div>
-      <div className="headerRight">
+      <div className={styles.headerRight}>
         { loggedIn ?
           <a href="/logout">Log Out</a> :
           <a href="/login">Log In</a>
